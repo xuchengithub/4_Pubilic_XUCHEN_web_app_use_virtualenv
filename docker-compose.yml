@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  pgadmin-compose:
+    image: dpage/pgadmin4:4.29
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "xuchen1522@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "16544:80"
+    depends_on:
+      - db_frame
+
+  db_frame:
+    image: postgres:12-alpine
+    volumes:
+      - postgres_author_data:/var/lib/postgresql/data/
+    ports:
+      - "5433:5432"
+    environment:
+      TZ: "Asia/Tokyo"
+    env_file:
+      - ./.env.prod.db
+
+volumes:
+  postgres_author_data:
+  # Check for errors in the logs if this doesn't work via docker-compose logs -f.
+  # To persist the data beyond the life of the container we configured a volume.
+  # WHY use FLASK_APP=project/__init__.py
+  # Error: Could not locate a Flask application. You did not provide the "FLASK_APP" environment variable, and a "wsgi.py" or "app.py" module was not found in the current directory.

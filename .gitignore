@@ -1,0 +1,4 @@
+web/__pycache__
+web/project/__pycache__
+web/log
+web/session_key
