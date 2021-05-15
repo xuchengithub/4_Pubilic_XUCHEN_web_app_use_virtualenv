@@ -2,7 +2,7 @@ source set_up_env.sh
 docker-compose -f ../docker-compose.yml up -d
 sudo apt install gunicorn
 pip3 install flask
-
+pip3 install sqlalchemy
 #!/bin/sh
 #ser in env.env 检测环境变量
 if [ "$DATABASE" = "postgres" ] #当这句话成立时执行then
