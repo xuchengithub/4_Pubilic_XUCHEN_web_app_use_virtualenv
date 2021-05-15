@@ -1,7 +1,0 @@
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-DEBUG:root:if_database_work_all:[<Task 1>]
-DEBUG:root:if_database_work:<Task 1>
-DEBUG:root:if_database_work_all:[<Task 1>]
-DEBUG:root:if_database_work:<Task 1>
