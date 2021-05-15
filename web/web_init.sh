@@ -1,7 +1,7 @@
 source set_up_env.sh
 docker-compose -f ../docker-compose.yml up -d
 sudo apt install gunicorn
-
+pip3 install flask
 
 #!/bin/sh
 #ser in env.env 检测环境变量
