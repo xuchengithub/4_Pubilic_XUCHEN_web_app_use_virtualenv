@@ -10,4 +10,3 @@ export DATABASE=postgresql
 
 echo "Upgrad_ENV_successed"
 
-pip3 install psycopg2-binary
