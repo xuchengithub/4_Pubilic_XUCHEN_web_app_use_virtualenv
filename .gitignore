@@ -1,5 +1,5 @@
-web/__pycache__
-web/project/__pycache__
-web/log/
-!web/log/.gitkeep
-web/session_key
+flask-backend/__pycache__
+flask-backend/project/__pycache__
+flask-backend/log/
+!flask-backend/log/.gitkeep
+flask-backend/session_key
