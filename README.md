@@ -2,7 +2,7 @@
 
 # 1.RUN frame work
 
-source web_init.sh
+    source web_init.sh
 
 # if you want to create the database
 
