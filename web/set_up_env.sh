@@ -1,6 +1,7 @@
 export FLASK_APP=project/__init__.py
 export FLASK_ENV=development
 export FLASK_if_create_database=YES
+
 export DATABASE_URL=postgresql://XUCHEN_flask:XUCHEN_flask@0.0.0.0:5433/XUCHEN_flask_prod
 
 export SQL_HOST=0.0.0.0
