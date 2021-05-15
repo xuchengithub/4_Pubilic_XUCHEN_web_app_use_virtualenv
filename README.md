@@ -1,6 +1,6 @@
 # Pubilic_XUCHEN_web_app_frame
 
-# 1.RUN frame work
+# RUN frame work
 
     source web_init.sh
 
