@@ -39,13 +39,6 @@ def index():
         
     return f"Hello world,database is {show_if_database_work}!"
 
-@app.route('/Scraping')
-# ---------------------database-------------------------
-# sql的tebal不能大写 # 储存licenses
-app.config.from_object("project.config_database.Config")
-# from_object (tell the program ,where is the config class )
-db = SQLAlchemy(app)
-
 
 class database_of_frame_information(db.Model):
     id = db.Column(db.Integer, primary_key=True)
