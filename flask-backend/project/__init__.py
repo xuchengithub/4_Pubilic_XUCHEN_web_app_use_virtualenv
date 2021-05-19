@@ -39,7 +39,7 @@ def index():
         
     return f"Hello world,database is {show_if_database_work}!"
 
-
+@app.route('/Scraping')
 # ---------------------database-------------------------
 # sql的tebal不能大写 # 储存licenses
 app.config.from_object("project.config_database.Config")
