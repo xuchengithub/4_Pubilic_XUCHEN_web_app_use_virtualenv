@@ -33,7 +33,7 @@ then
 fi
 
 
-echo "run gunicorn"
-nohup gunicorn manage:app -c gunicorn_set.py &
+# echo "run gunicorn"
+# nohup gunicorn manage:app -c gunicorn_set.py &
 
 exec "$@" #then run cammod  entrypoint bash,it will run bash
