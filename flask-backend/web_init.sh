@@ -4,7 +4,7 @@ docker-compose -f ../database/docker-compose.yml up -d
 #npx create-react-app ../reactjs-frontend
 
 pip3 install psycopg2-binary
-apt install gunicorn
+sudo apt install gunicorn
 pip3 install flask
 pip3 install sqlalchemy
 pip3 install flask
