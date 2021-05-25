@@ -34,6 +34,9 @@ then
     echo "Tables created"
 fi
 
+mkdir ./project/static
+mkdir ./project/templates
+mkdir ./log
 
 # echo "run gunicorn"
 # nohup gunicorn manage:app -c gunicorn_set.py &
