@@ -12,7 +12,7 @@ cli = FlaskGroup(app)
 def create_and_init_db():
     db.create_all()
 
-    if_database_work = "work"
+    if_database_work = "now build the database and it can work"
 
     add_database_of_frame_information = database_of_frame_information(
         if_database_work
