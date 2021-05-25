@@ -2,7 +2,9 @@ source set_up_env.sh
 docker-compose -f ../database/docker-compose.yml up -d
 
 #npx create-react-app ../reactjs-frontend
+sudo apt-get update
 
+pip install --upgrade pip
 pip3 install psycopg2-binary
 pip3 install gunicorn
 pip3 install flask
