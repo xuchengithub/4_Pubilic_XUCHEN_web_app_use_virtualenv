@@ -1,5 +1,5 @@
-source set_up_env.sh
-docker-compose -f ../database/docker-compose.yml up -d
+# source set_up_env.sh
+# docker-compose -f ../database/docker-compose.yml up -d
 
 #npx create-react-app ../reactjs-frontend
 sudo apt-get update
