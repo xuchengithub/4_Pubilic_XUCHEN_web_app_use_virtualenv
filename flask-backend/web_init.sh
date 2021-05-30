@@ -1,6 +1,6 @@
 pip install --upgrade pip
 pip install -r requirements.txt
-
+export PATH=$PATH:/usr/local/bin
 #ser in env.env 检测环境变量
 if [ "$DATABASE" = "postgres" ] #当这句话成立时执行then
 then
@@ -20,11 +20,41 @@ then
     echo "Tables created"
 fi
 
-mkdir ./project/static
-mkdir ./project/templates
-mkdir ./log
+#-e filename 如果 filename存在，则为真
+static_DIR="./project/static"
+if [ -d "$static_DIR" ]; then
+  ### Take action if $DIR exists ###
+  echo "already have ${static_DIR}..."
+else
+  ###  Control will jump here if $DIR does NOT exists ###
+  mkdir ${static_DIR}
+  echo "create ${static_DIR} ."
+fi
 
-# echo "run gunicorn"
-# nohup gunicorn manage:app -c gunicorn_set.py &
+#-e filename 如果 filename存在，则为真
+templates_DIR="./project/templates"
+if [ -d "$templates_DIR" ]; then
+  ### Take action if $DIR exists ###
+  echo "already have ${templates_DIR}..."
+else
+  ###  Control will jump here if $DIR does NOT exists ###
+  mkdir ${templates_DIR}
+  echo "create ${templates_DIR} ."
+fi
+
+
+#-e filename 如果 filename存在，则为真
+log_DIR="./log"
+if [ -d "$log_DIR" ]; then
+  ### Take action if $DIR exists ###
+  echo "already have ${log_DIR}..."
+else
+  ###  Control will jump here if $DIR does NOT exists ###
+  mkdir ${log_DIR}
+  echo "create ${log_DIR} ."
+fi
+
+echo "run gunicorn"
+gunicorn manage:app -c gunicorn_set.py 
 
 exec "$@" #then run cammod  entrypoint bash,it will run bash

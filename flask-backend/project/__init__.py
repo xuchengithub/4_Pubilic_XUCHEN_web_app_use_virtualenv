@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 date = datetime.date(datetime.now())
 logging.basicConfig(
-    filename=f"project/log/kusuri_{date.year:04}_{date.month:02}_{date.day:02}.log", level=logging.DEBUG)
+    filename=f"./log/kusuri_{date.year:04}_{date.month:02}_{date.day:02}.log", level=logging.DEBUG)
 app.config['DEBUG'] = True
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
