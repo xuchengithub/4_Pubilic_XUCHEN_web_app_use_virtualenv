@@ -55,6 +55,6 @@ else
 fi
 
 echo "run gunicorn"
-gunicorn manage:app -c gunicorn_set.py 
+gunicorn manage:app -c gunicorn_set.py &
 
 exec "$@" #then run cammod  entrypoint bash,it will run bash

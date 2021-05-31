@@ -17,12 +17,13 @@ ADD . /usr/src/app
 WORKDIR /usr/src/app
 # RUN ls
 RUN chmod +x /usr/src/app/web_init.sh 
-CMD ["/usr/src/app/web_init.sh "]
+RUN /usr/src/app/web_init.sh 
+# CMD ["/usr/src/app/web_init.sh "]
 RUN echo "finisded_set_up_base"
 # # RUN chmod +x services/web/entrypoint.sh
 # ######debug##################################
-# FROM base as debug
-# RUN pip install ptvsd
+FROM base as debug
+RUN pip install ptvsd
 # EXPOSE 50000
 # ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 # # CMD command param1 param2 (shell form) 
